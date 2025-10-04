@@ -1,27 +1,35 @@
-# PaqueteriaF
+# 📦 Paquetería Guelaguetza
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+## 📌 Descripción
+El proyecto **Paquetería Guelaguetza** tiene como objetivo desarrollar un sistema digital de gestión para optimizar los procesos de registro, control y seguimiento de envíos.  
+Con este sistema se busca **digitalizar los formularios de envío y recepción de paquetes**, generar **reportes automáticos** sobre el estado de los mismos y permitir un **seguimiento en tiempo real** de cada paquete, desde su salida en la sucursal hasta la entrega final al cliente.  
 
-## Development server
+La implementación del sistema se apoyará en principios de **DevOps**, promoviendo la colaboración continua del equipo mediante herramientas de control de versiones, comunicación digital y flujos de trabajo organizados.  
+De esta forma, se asegurará que el software evolucione de manera ágil, escalable y confiable.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 👥 Integrantes del equipo
+- Mildred Alely Cruz Juárez  
+- Miriam Belen Santiago Simón 
+- Angel Eduardo Blanco Cruz  
+- Giovanni Garcia Chimil 
+- Jose Luis Gandarillas Dominguez 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🛠️ Tecnologías planeadas
+- **Frontend:** Angular  
+- **Backend:** PHP Laravel  
+- **Base de datos:** MySQL  
+- **Control de versiones:** Git + GitHub  
+- **Metodología:** DevOps con integración continua y tablero digital (GitHub Projects / Trello)  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🚀 Estructura del repositorio
+```bash
+https://docs.google.com/document/d/1lJJH5rHdZoqAzBP0I6zwEmgYIB28MHEORnni4ebtm7c/edit?usp=sharing    -> Documentación del proyecto
+/src     -> Código fuente
+/tests   -> Pruebas (futuras implementaciones)
+README.md
