@@ -23,13 +23,13 @@ De esta forma, se asegurará que el software evolucione de manera ágil, escalab
 - **Backend:** PHP Laravel  
 - **Base de datos:** MySQL  
 - **Control de versiones:** Git + GitHub  
-- **Metodología:** DevOps con integración continua y tablero digital (GitHub Projects / Trello)  
+- **Metodología:** DevOps con integración continua y tablero digital ( Trello)  
 
 ---
 
 ## 🚀 Estructura del repositorio
 ```bash
 https://docs.google.com/document/d/1lJJH5rHdZoqAzBP0I6zwEmgYIB28MHEORnni4ebtm7c/edit?usp=sharing    -> Documentación del proyecto
-/src     -> Código fuente
+
 /tests   -> Pruebas (futuras implementaciones)
-README.md
+
