@@ -20,7 +20,7 @@ De esta forma, se asegurará que el software evolucione de manera ágil, escalab
 
 ## 🛠️ Tecnologías planeadas
 - **Frontend:** Angular  
-- **Backend:** PHP Laravel  
+- **Backend:** Nest.js  
 - **Base de datos:** MySQL  
 - **Control de versiones:** Git + GitHub  
 - **Metodología:** DevOps con integración continua y tablero digital ( Trello)  
