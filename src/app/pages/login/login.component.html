@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="wrap">
+    <img src="assets/caja1.jpg" alt="">
+    <div class="login-content">
+        <h1>PAQUETERÍA GUELAGUETZA</h1>
+        <h2>Enviemos felicidad</h2>
+        <p>Rellena los campos para iniciar sesión</p>
+        <div class="login-content-row">
+            <label for="">Usuario</label>
+            <input type="text" [formControl]="usuario">
+        </div>
+        <div class="login-content-row">
+            <label for="">Contraseña</label>
+            <input type="text" [formControl]="password">
+        </div>
+        <div class="buttons-container">
+            <button class="btnLogin">Iniciar sesión</button>
+            <button class="btnNuevo" routerLink="/nuevo">Agregar usuario</button>
+            <img src="assets/cajas.png" alt="">
+
+        </div>
+    </div>
+</div>
