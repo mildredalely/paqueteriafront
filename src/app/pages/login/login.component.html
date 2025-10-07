@@ -1,22 +1,22 @@
 <div class="wrap">
-    <img src="assets/caja1.jpg" alt="">
+    <img src="assets/caja1.webp" alt="">
     <div class="login-content">
         <h1>PAQUETERÍA GUELAGUETZA</h1>
         <h2>Enviemos felicidad</h2>
         <p>Rellena los campos para iniciar sesión</p>
+
         <div class="login-content-row">
             <label for="">Usuario</label>
-            <input type="text" [formControl]="usuario">
+            <input type="text">
         </div>
         <div class="login-content-row">
             <label for="">Contraseña</label>
-            <input type="text" [formControl]="password">
+            <input type="text">
         </div>
         <div class="buttons-container">
-            <button class="btnLogin">Iniciar sesión</button>
+            <button class="btnLogin" routerLink="/envio-mx">Iniciar sesión</button>
             <button class="btnNuevo" routerLink="/nuevo">Agregar usuario</button>
-            <img src="assets/cajas.png" alt="">
-
+            <img src="assets/cajas.webp" alt="">
         </div>
     </div>
 </div>
