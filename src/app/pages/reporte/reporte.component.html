@@ -1,1 +1,22 @@
-<p>reporte works!</p>
+<div class="container">
+  <h2>GENERAR REPORTE</h2>
+
+  <div class="card">
+    <h3>Envíos del día</h3>
+
+    <div *ngFor="let turno of reportes; let i = index">
+      <hr />
+      <h4>Turno {{ i + 1 }}</h4>
+      <p><b>Empleado en turno:</b> {{ turno.empleado }}</p>
+      <p><b>Pedidos realizados:</b> {{ turno.pedidos }}</p>
+      <p><b>Ingresos totales:</b> {{ turno.ingresos | currency }}</p>
+      <p><b>Salidas:</b> {{ turno.salidas | currency }}</p>
+      <p><b>Total en final:</b> {{ turno.total | currency }}</p>
+    </div>
+
+    <hr />
+    <p><b>Total del día:</b> {{ totalDia | currency }}</p>
+    <button (click)="imprimir()">Imprimir</button>
+  </div>
+</div>
+
