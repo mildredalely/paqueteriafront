@@ -1,0 +1,78 @@
+<div class="wrap">
+    <img class="img1" src="assets/Path_15.png">
+
+    @if (step == 1) {
+    <h1>GENERAR ENVÍO DE MÉXICO A EEUU.</h1>
+    <div class="envio-content">
+        <h2>Información del remitente</h2>
+        <div class="envio-content-row">
+            <label for="">Nombre</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row">
+            <label for="">Teléfono</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row">
+            <label for="">N° de identificación</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row-btn">
+            <button class="btnNext" (click)="nextStep()">Siguiente</button>
+        </div>
+    </div>
+    }@else if(step == 2){
+        <h1>GENERAR ENVÍO DE MÉXICO A EEUU.</h1>
+        <div class="envio-content">
+        <h2>Información del destinatario</h2>
+        <div class="envio-content-row">
+            <label for="">Nombre</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row">
+            <label for="">Teléfono</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row">
+            <label for="">Ciudad</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row-mid">
+            <p>En caso de enviar a una ciudad fuera de California, rellene lo siguiente</p>
+        </div>
+        <div class="envio-content-row">
+            <label for="">Dirección completa</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row2">
+            <label for="">C.P.</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row2">
+            <label for="">Ciudad</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row">
+            <label for="">Horario en que se encuentra</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row-btn">
+            <button class="btnNext" (click)="nextStep()">Agregar mercancía</button>
+        </div>
+    </div>
+    }@else if(step == 3){
+        <h1>GENERAR ENVÍO DE MÉXICO A EEUU.</h1>
+        <div class="envio-content">
+        <h2>Información del paquete</h2>
+        
+        <div class="envio-content-row">
+            <label for="">Nombre del producto</label>
+            <input type="text">
+        </div>
+        <div class="envio-content-row-btn">
+            <button class="btnNext" (click)="nextStep()">Guardar</button>
+        </div>
+    </div>
+    }
+    <img src="assets/Path_14.png" class="footer">
+</div>

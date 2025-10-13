@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './envio-mx.component.css'
 })
 export class EnvioMxComponent {
+  step = 1;
+  nextStep(){
+    this.step += 1;
+  }
 
 }
