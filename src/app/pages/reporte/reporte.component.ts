@@ -24,6 +24,13 @@ export class ReporteComponent {
       ingresos: 1800,
       salidas: 300,
       total: 1500
+    },
+    {
+      empleado: 'Alely',
+      pedidos: 20,
+      ingresos: 1800,
+      salidas: 420,
+      total: 2500
     }
   ];
 
