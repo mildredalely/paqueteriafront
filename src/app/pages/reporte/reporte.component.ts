@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './reporte.component.html',
   styleUrl: './reporte.component.css'
 })
-export class ReporteComponent {
+export class ReporteComponent { 
    reportes = [
     {
       empleado: 'Mildred',
