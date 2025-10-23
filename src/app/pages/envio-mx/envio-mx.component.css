@@ -83,6 +83,7 @@
     font-size: 18px;
     border: none;
     height: 2em;
+    background-color: rgba(7, 99, 136, .3);
 }
 
 .envio-content-row-btn button{
@@ -92,4 +93,77 @@
     border: none;
     border-radius: 10px;
     font-size: 18px;
+}
+.card_cantainer{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 90%;
+    height: 40%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+.card_cantainer::-webkit-scrollbar {
+    height: 8px;
+}
+.card_cantainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.card_cantainer::-webkit-scrollbar-thumb {
+    background: #076388;
+    border-radius: 4px;
+}
+
+.card_cantainer::-webkit-scrollbar-thumb:hover {
+    background: #083C78;
+}
+.card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    height: 80%;
+    text-align: left;
+    flex: 0 0 auto;
+    margin-left: 0;
+}
+.envio-content-row2 select{
+    border-radius: 8px;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    height: 2em;
+    background-color: rgba(7, 99, 136, .3);
+    color: white;
+}
+.envio-content-row2 option{
+    border-radius: 8px;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    height: 1em;
+    background-color: rgba(7, 99, 136, .3);
+    color: white;
+}
+.envio-content-row2 button{
+    padding: 10px;
+    color: white;
+    background-color: rgba(7, 99, 136, .8);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.envio-content h3{
+    margin: 0;
+}
+
+.line{
+    margin:0;
 }
