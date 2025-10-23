@@ -108,6 +108,43 @@
             <button class="btnNext" (click)="nextStep()">Guardar</button>
         </div>
     </div>
+    }@else if(step == 4){
+    <h1>GENERAR ENVÍO DE MÉXICO A EEUU.</h1>
+    <div class="envio-content">
+        <div class="details">
+            <h2>Detalles del pedido</h2>
+            <p>fecha de creación</p>
+            <h3>Información del remitente</h3>
+            <img class="line" src="assets/Line9.png" alt="">
+            <p>Nombre: </p>
+            <p>Teléfono: </p>
+            <p>N° de identificación: </p>
+            <h3>Información del destinatario</h3>
+            <img class="line" src="assets/Line9.png" alt="">
+            <p>Nombre: </p>
+            <p>Teléfono: </p>
+            <p>Ciudad: </p>
+            <p>Dirección completa: </p>
+            <p>C.P.: </p>
+            <p>Ciudad: </p>
+            <p>Horario en que se encuentra: </p>
+            <img class="line" src="assets/Line9.png" alt="">
+        </div>
+        <div class="envio-content-row2">
+            <p>Comprueba los datos antes de imprimir</p>
+        </div>
+        <div class="envio-content-row2">
+            <button class="btnNext" (click)="nextStep()">Imprimir</button>
+        </div>
+    </div>
+    }@else if (step == 5) {
+    <h1>GENERAR ENVÍO DE MÉXICO A EEUU.</h1>
+    <div class="envio-content" (click)="nextStep()">
+        <h2>
+            PEDIDO REALIZADO CORRECTAMENTE!
+        </h2>
+        <p>Presiona la pantalla para continuar</p>
+    </div>
     }
     <app-footer></app-footer>
 </div>
