@@ -2,8 +2,9 @@
 
   .reporte-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #ffffff;
     padding: 2rem 1rem;
+    position: relative;
   }
 
   .wave-decoration {
@@ -11,11 +12,25 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 150px;
     z-index: 0;
   }
 
   .wave-decoration svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wave-decoration-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 0;
+  }
+
+  .wave-decoration-bottom svg {
     width: 100%;
     height: 100%;
   }
@@ -27,6 +42,7 @@
     position: relative;
     z-index: 1;
     animation: fadeInUp 0.6s ease-out;
+    background: white;
   }
 
   @keyframes fadeInUp {
@@ -40,8 +56,8 @@
     }
   }
 
-  .card-header.bg-gradient {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+  .card-header {
+    background: white !important;
     border-radius: 20px 20px 0 0 !important;
   }
 
@@ -56,7 +72,7 @@
 
   .turno-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 20px rgba(18, 110, 154, 0.15) !important;
   }
 
   .info-row {
@@ -67,15 +83,16 @@
   }
 
   .total-dia-container {
+    background: #126e9a;
     animation: pulse 2s ease-in-out infinite;
   }
 
   @keyframes pulse {
     0%, 100% {
-      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+      box-shadow: 0 4px 15px rgba(18, 110, 154, 0.3);
     }
     50% {
-      box-shadow: 0 4px 25px rgba(13, 110, 253, 0.5);
+      box-shadow: 0 4px 25px rgba(18, 110, 154, 0.5);
     }
   }
 
@@ -83,11 +100,13 @@
     transition: all 0.3s ease;
     font-weight: 600;
     border: none;
+    background-color: #126e9a;
   }
 
   .btn-imprimir:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+    box-shadow: 0 8px 25px rgba(18, 110, 154, 0.4);
+    background-color: #0e5a7d;
   }
 
   .turno-badge .badge {

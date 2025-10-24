@@ -1,37 +1,25 @@
 <div class="reporte-container d-flex flex-column align-items-center position-relative">
-  <!-- Ola decorativa superior -->
   <div class="wave-decoration">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M0,0 C300,80 600,80 900,40 C1050,20 1150,30 1200,50 L1200,0 L0,0 Z" fill="url(#gradient1)"/>
-      <path d="M0,20 C300,100 600,100 900,60 C1050,40 1150,50 1200,70 L1200,0 L0,0 Z" fill="url(#gradient2)" opacity="0.5"/>
-      <defs>
-        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0a58ca;stop-opacity:1" />
-        </linearGradient>
-        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#6ea8fe;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0d6efd;stop-opacity:1" />
-        </linearGradient>
-      </defs>
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,100 C320,200 420,0 740,100 C1060,200 1160,0 1440,100 L1440,0 L0,0 Z" fill="#126e9a"/>
     </svg>
   </div>
 
   <div class="card reporte-card shadow-lg border-0 mt-5 mb-5">
-    <div class="card-header bg-gradient text-white text-center py-4 border-0">
-      <h2 class="fw-bold mb-0 letra-espaciada">GENERAR REPORTE</h2>
+    <div class="card-header text-white text-center py-4 border-0 position-relative">
+      <h2 class="fw-bold mb-0 letra-espaciada" style="color: #126e9a;">GENERAR REPORTE</h2>
     </div>
 
     <div class="card-body p-4">
       <div class="bg-light rounded-4 p-4 shadow-sm">
         <div class="text-center mb-4">
-          <h5 class="text-secondary mb-0 fw-bold">📦 Envíos del día</h5>
+          <h5 class="mb-0 fw-bold" style="color: #126e9a;">📦 Envíos del día</h5>
         </div>
 
         <div *ngFor="let turno of reportes; let i = index" class="turno-item mb-4 p-3 bg-white rounded-3 shadow-sm">
           <div class="d-flex align-items-center mb-3">
             <div class="turno-badge">
-              <span class="badge bg-primary rounded-pill px-3 py-2">Turno {{ i + 1 }}</span>
+              <span class="badge rounded-pill px-3 py-2" style="background-color: #126e9a;">Turno {{ i + 1 }}</span>
             </div>
           </div>
 
@@ -61,7 +49,7 @@
           </div>
         </div>
 
-        <div class="total-dia-container p-4 bg-primary bg-gradient text-white rounded-4 shadow mb-4">
+        <div class="total-dia-container p-4 text-white rounded-4 shadow mb-4">
           <div class="d-flex justify-content-between align-items-center">
             <span class="fw-bold fs-4">💵 Total del día:</span>
             <span class="fw-bold fs-3">{{ totalDia | currency }}</span>
@@ -70,10 +58,17 @@
 
         <div class="text-center">
           <button class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm btn-imprimir" (click)="imprimir()">
-            🖨️ Imprimir Reporte
+             Imprimir Reporte
           </button>
         </div>
       </div>
     </div>
   </div>
-</div>  
+
+  
+  <div class="wave-decoration-bottom">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,100 C320,0 420,200 740,100 C1060,0 1160,200 1440,100 L1440,200 L0,200 Z" fill="#126e9a"/>
+    </svg>
+  </div>
+</div>
