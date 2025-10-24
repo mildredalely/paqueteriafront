@@ -21,12 +21,6 @@
     margin: 0;
     transform: translateY(-160%);
 }
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  z-index: 10;
-}
 
 .envio-content{
     transform: translateY(-20%);
