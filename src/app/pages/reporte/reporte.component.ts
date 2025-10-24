@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-reporte',
   standalone: true,
@@ -18,28 +18,17 @@ export class ReporteComponent {
       salidas: 500,
       total: 2000
     },
-    {
-      empleado: 'Miriam',
-      pedidos: 12,
-      ingresos: 1800,
-      salidas: 300,
-      total: 1500
-    },
-    {
-      empleado: 'Alely',
-      pedidos: 20,
-      ingresos: 1800,
-      salidas: 420,
-      total: 2500
-    }
   ];
 
   get totalDia(): number {
     return this.reportes.reduce((acc, turno) => acc + turno.total, 0);
   }
+constructor(private router: Router) {}
 
   imprimir() {
-    window.print();
+    
+    localStorage.setItem('totalDia', this.totalDia.toString());
+    this.router.navigate(['caja']);
   }
 
 }

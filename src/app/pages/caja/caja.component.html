@@ -1,0 +1,18 @@
+<div class="reporte-container d-flex flex-column align-items-center">
+  <div class="decoracion-superior w-100"></div>
+
+  <div class="card reporte-card shadow p-4 mt-3 mb-3 text-center">
+    <h5 class="fw-bold text-secondary mb-3">Efectivo en caja</h5>
+    <input
+      type="number"
+      [(ngModel)]="efectivoCaja"
+      class="form-control mb-4 text-center"
+      placeholder="Ingresa la cantidad"
+    />
+    <button class="btn btn-primary rounded-pill px-4 py-2" (click)="cerrarTurno()">
+      Cerrar turno
+    </button>
+  </div>
+
+  <div class="decoracion-inferior w-100"></div>
+</div>
