@@ -1,6 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
+interface Envio {
+  fecha: string;
+  remitente: {
+    nombre: string;
+    direccion: string;
+  };
+  destinatario: {
+    nombre: string;
+    direccion: string;
+  };
+  estado: string;
+  productos?: {
+    nombre: string;
+    cantidad: number;
+    peso: number;
+    fragil: boolean;
+  }[];
+}
 
 @Component({
   selector: 'app-historial',
@@ -10,7 +29,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./historial.component.css']
 })
 export class HistorialComponent {
-  envios = [
+  router = inject(Router);
+
+  envios: Envio[] = [
     {
       fecha: '25/sep/2023',
       remitente: {
@@ -21,7 +42,11 @@ export class HistorialComponent {
         nombre: 'Miriam Belén Santiago',
         direccion: 'Alguna dirección de EU, Texas'
       },
-      estado: 'Completado'
+      estado: 'Completado',
+      productos: [
+        { nombre: 'Producto 1', cantidad: 8, peso: 4, fragil: true },
+        { nombre: 'Producto 2', cantidad: 2, peso: 1, fragil: false }
+      ]
     },
     {
       fecha: '10/oct/2023',
@@ -50,7 +75,7 @@ export class HistorialComponent {
   ];
 
   verEnvio(index: number) {
-    console.log('Ver detalles del envío', this.envios[index]);
-    // Aquí podrías navegar a una ruta de detalle o mostrar un modal
+    localStorage.setItem('envios', JSON.stringify(this.envios)); // temporal
+    this.router.navigate(['/detalle', index]);
   }
 }
