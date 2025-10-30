@@ -1,18 +1,49 @@
-<div class="reporte-container d-flex flex-column align-items-center">
-  <div class="decoracion-superior w-100"></div>
+<div class="reporte-container d-flex flex-column align-items-center min-vh-100 bg-light">
+  <div class="decoracion-superior w-100 bg-primary" style="height: 6px;"></div>
 
-  <div class="card reporte-card shadow p-4 mt-3 mb-3 text-center">
-    <h5 class="fw-bold text-secondary mb-3">Efectivo en caja</h5>
-    <input
-      type="number"
-      [(ngModel)]="efectivoCaja"
-      class="form-control mb-4 text-center"
-      placeholder="Ingresa la cantidad"
-    />
-    <button class="btn btn-primary rounded-pill px-4 py-2" (click)="cerrarTurno()">
-      Cerrar turno
+  <div class="card reporte-card shadow p-4 mt-4 mb-3 text-center" style="max-width: 400px; width: 100%;">
+    <h4 class="fw-bold text-primary mb-4">Cierre de Caja</h4>
+
+    
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Total esperado</label>
+      <input
+        type="number"
+        class="form-control text-center fw-bold"
+        [value]="totalEsperado"
+        readonly
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Efectivo en caja</label>
+      <input
+        type="number"
+        [(ngModel)]="efectivoCaja"
+        class="form-control text-center"
+        placeholder="Ingresa la cantidad"
+      />
+    </div>
+
+  
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Correo destino</label>
+      <input
+        type="email"
+        [(ngModel)]="correo"
+        class="form-control text-center"
+        placeholder="ejemplo@correo.com"
+      />
+    </div>
+
+
+    <button
+      class="btn btn-success rounded-pill px-4 py-2 fw-semibold"
+      (click)="enviarCorreo()"
+    >
+      Enviar reporte
     </button>
   </div>
 
-  <div class="decoracion-inferior w-100"></div>
+  <div class="decoracion-inferior w-100 bg-primary" style="height: 6px;"></div>
 </div>
