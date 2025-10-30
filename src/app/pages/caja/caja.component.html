@@ -1,49 +1,68 @@
-<div class="reporte-container d-flex flex-column align-items-center min-vh-100 bg-light">
-  <div class="decoracion-superior w-100 bg-primary" style="height: 6px;"></div>
+<div class="caja-container d-flex flex-column align-items-center position-relative">
 
-  <div class="card reporte-card shadow p-4 mt-4 mb-3 text-center" style="max-width: 400px; width: 100%;">
-    <h4 class="fw-bold text-primary mb-4">Cierre de Caja</h4>
-
-    
-    <div class="mb-3">
-      <label class="form-label fw-semibold">Total esperado</label>
-      <input
-        type="number"
-        class="form-control text-center fw-bold"
-        [value]="totalEsperado"
-        readonly
-      />
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label fw-semibold">Efectivo en caja</label>
-      <input
-        type="number"
-        [(ngModel)]="efectivoCaja"
-        class="form-control text-center"
-        placeholder="Ingresa la cantidad"
-      />
-    </div>
-
-  
-    <div class="mb-4">
-      <label class="form-label fw-semibold">Correo destino</label>
-      <input
-        type="email"
-        [(ngModel)]="correo"
-        class="form-control text-center"
-        placeholder="ejemplo@correo.com"
-      />
-    </div>
-
-
-    <button
-      class="btn btn-success rounded-pill px-4 py-2 fw-semibold"
-      (click)="enviarCorreo()"
-    >
-      Enviar reporte
-    </button>
+  <div class="wave-decoration-top">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,100 C320,200 420,0 740,100 C1060,200 1160,0 1440,100 L1440,0 L0,0 Z" fill="#126e9a"/>
+    </svg>
   </div>
 
-  <div class="decoracion-inferior w-100 bg-primary" style="height: 6px;"></div>
+  <div class="card caja-card shadow-lg border-0 mt-5 mb-5">
+    <div class="card-header text-center py-4 border-0">
+      <h4 class="fw-bold mb-0 letra-espaciada" style="color: #126e9a;">Cierre de Caja</h4>
+    </div>
+
+    <div class="card-body p-4">
+      <div class="mb-4">
+        <label class="form-label fw-semibold text-muted d-flex align-items-center justify-content-center gap-2">
+          <span></span> Total esperado
+        </label>
+        <input
+          type="number"
+          class="form-control form-control-custom text-center fw-bold"
+          [value]="totalEsperado"
+          readonly
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold text-muted d-flex align-items-center justify-content-center gap-2">
+          <span></span> Efectivo en caja
+        </label>
+        <input
+          type="number"
+          [(ngModel)]="efectivoCaja"
+          class="form-control form-control-custom text-center"
+          placeholder="Ingresa la cantidad"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold text-muted d-flex align-items-center justify-content-center gap-2">
+          <span></span> Correo destino
+        </label>
+        <input
+          type="email"
+          [(ngModel)]="correo"
+          class="form-control form-control-custom text-center"
+          placeholder="ejemplo@correo.com"
+        />
+      </div>
+
+      <div class="text-center mt-4">
+        <button
+          class="btn btn-enviar btn-lg rounded-pill px-5 py-3 fw-semibold shadow"
+          (click)="enviarCorreo()"
+        >
+           Enviar reporte
+        </button>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="wave-decoration-bottom">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,100 C320,0 420,200 740,100 C1060,0 1160,200 1440,100 L1440,200 L0,200 Z" fill="#126e9a"/>
+    </svg>
+  </div>
 </div>
