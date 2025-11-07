@@ -10,23 +10,19 @@
 }
 
 .wrap img{
-    width: 400px;
-    height: 400px;
+    margin-top: 20%;
+    width: 200px;
+    height: 200px;
 }
 
-.login-content{
-    transform: translateY(-20%);
+.add-content h1{
+    font-size: 26px;
 }
-.login-content h1{
-    font-family: Acme;
-    font-size: 24px;
-}
-.login-content h2{
+.add-content h2{
     font-size: 20px;
 }
 
-/* Con esto conseguimos una alineación no destructiva de los elementos del formulario */
-.login-content-row {
+.add-content-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,14 +30,14 @@
     margin: 0 auto 1em auto;
 }
 
-.login-content label {
+.add-content label {
     font-size: 18px;
     margin: 0 0 0.3em 0;
     text-align: left;
     width: 100%;
 }
 
-.login-content input {
+.add-content input {
     border-radius: 8px;
     width: 100%;
     font-size: 20px;
@@ -49,8 +45,8 @@
     height: 2em;
     margin-bottom: 0.5em;
 }
-/*  */
-.login-content button {
+
+.add-content button {
   margin: 10px 0;
   padding: 0.7em;
   border-radius: 8px;
@@ -60,22 +56,11 @@
   text-align: center;
 }
 
-.btnLogin {
+.btnAdd {
   background-color: #083C78;
   color: white;
   border: none;
   justify-content: center;
-
-}
-
-.btnNuevo {
-  background-color: #C7B545;
-  color: white;
-  justify-content: center;
-  border: none;
-
-}
-
-.buttons-container img{
-    transform: translateX(150px);
+  width: 80%;
+  font-size: 20px;
 }
