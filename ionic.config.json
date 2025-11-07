@@ -1,0 +1,7 @@
+{
+  "name": "paqueteriafront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
