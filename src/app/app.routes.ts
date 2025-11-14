@@ -4,6 +4,7 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
 import { CajaComponent } from './pages/caja/caja.component';
 import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
 import { EnvioMxComponent } from './pages/envio-mx/envio-mx.component';
+import { HistorialComponent } from './pages/historial/historial.component';
 
 export const routes: Routes = [
     {
@@ -24,13 +25,17 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
-    path: 'reporte',    
-    component: ReporteComponent
-  },
-  {
-    path: 'caja',    
-    component: CajaComponent
-  },
+        path: 'reporte',
+        component: ReporteComponent
+    },
+    {
+        path: 'caja',
+        component: CajaComponent
+    },
+    {
+        path: 'historial',
+        component: HistorialComponent
+    },
     {
         path: '**',
         redirectTo: '/login',
