@@ -1,1 +1,74 @@
-<p>reporte works!</p>
+<div class="reporte-container d-flex flex-column align-items-center position-relative">
+  <div class="wave-decoration">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path d="M0,100 C320,200 420,0 740,100 C1060,200 1160,0 1440,100 L1440,0 L0,0 Z" fill="#126e9a" />
+    </svg>
+  </div>
+
+  <div class="card reporte-card shadow-lg border-0 mt-5 mb-5">
+    <div class="card-header text-white text-center py-4 border-0 position-relative">
+      <h2 class="fw-bold mb-0 letra-espaciada" style="color: #126e9a;">GENERAR REPORTE</h2>
+    </div>
+
+    <div class="card-body p-4">
+      <div class="bg-light rounded-4 p-4 shadow-sm">
+        <div class="text-center mb-4">
+          <h5 class="mb-0 fw-bold" style="color: #126e9a;">Envíos del día</h5>
+        </div>
+
+      
+        @for (turno of reportes; track turno; let i = $index) {
+          <div class="turno-item mb-4 p-3 bg-white rounded-3 shadow-sm">
+            <div class="d-flex align-items-center mb-3">
+              <div class="turno-badge">
+                <span class="badge rounded-pill px-3 py-2" style="background-color: #126e9a;">
+                  Turno {{ i + 1 }}
+                </span>
+              </div>
+            </div>
+
+            <div class="info-row mb-2">
+              <span class="fw-semibold text-muted">Empleado en turno:</span>
+              <span class="fw-bold">{{ turno.empleado }}</span>
+            </div>
+
+            <div class="info-row mb-2">
+              <span class="fw-semibold text-muted">Pedidos realizados:</span>
+              <span class="badge bg-info text-dark">{{ turno.pedidos }}</span>
+            </div>
+
+            <div class="info-row mb-2">
+              <span class="fw-semibold text-muted">Ingresos totales:</span>
+              <span class="text-success fw-bold">{{ turno.ingresos | currency }}</span>
+            </div>
+
+            <div class="info-row mb-2">
+              <span class="fw-semibold text-muted">Salidas:</span>
+              <span class="text-danger fw-bold">{{ turno.salidas | currency }}</span>
+            </div>
+
+            <div class="info-row pt-2 border-top mt-3">
+              <span class="fw-bold">Total al final:</span>
+              <span class="fw-bold text-success fs-5">{{ turno.total | currency }}</span>
+            </div>
+          </div>
+        }
+
+        <div class="total-dia-container p-4 text-white rounded-4 shadow mb-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold fs-4">Total del día:</span>
+            <span class="fw-bold fs-3">{{ totalDia | currency }}</span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-sm btn-imprimir" (click)="imprimir()">
+            Imprimir Reporte
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

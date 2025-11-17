@@ -1,0 +1,125 @@
+
+  .caja-container {
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+
+  .wave-decoration-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 0;
+  }
+
+  .wave-decoration-top svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wave-decoration-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 0;
+  }
+
+  .wave-decoration-bottom svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .caja-card {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px !important;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.6s ease-out;
+    background: white;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-header {
+    background: white !important;
+    border-radius: 20px 20px 0 0 !important;
+    border-bottom: 2px solid #e9ecef;
+  }
+
+  .letra-espaciada {
+    letter-spacing: 1.5px;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control-custom {
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-control-custom:focus {
+    border-color: #126e9a;
+    box-shadow: 0 0 0 0.2rem rgba(18, 110, 154, 0.15);
+  }
+
+  .form-control-custom:read-only {
+    background-color: #f8f9fa;
+    color: #126e9a;
+    font-size: 1.2rem;
+  }
+
+  .btn-enviar {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-enviar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+  }
+
+  .btn-enviar:active {
+    transform: scale(0.98);
+  }
+
+  
+  .form-control-custom:focus {
+    animation: inputFocus 0.3s ease;
+  }
+
+  @keyframes inputFocus {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
