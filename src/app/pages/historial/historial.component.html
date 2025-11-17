@@ -1,0 +1,19 @@
+<div class="historial-container">
+  <div class="fondo-decorativo-top"></div>
+
+  <h1 class="titulo"> HISTORIAL DE ENVÍOS</h1>
+
+  <div class="carrusel">
+    <div class="tarjeta-envio" *ngFor="let envio of envios; let i = index">
+      <h2>Envío {{ i + 1 }}</h2>
+      <p class="fecha">{{ envio.fecha }}</p>
+      <p><strong>Remitente:</strong> {{ envio.remitente.nombre }}, {{ envio.remitente.direccion }}</p>
+      <p><strong>Destinatario:</strong> {{ envio.destinatario.nombre }}, {{ envio.destinatario.direccion }}</p>
+      <p class="estado completado">{{ envio.estado }}</p>
+      <button class="btn-ver" (click)="verEnvio(i)"> Ver</button>
+    </div>
+  </div>
+
+  <div class="fondo-decorativo-bottom"></div>
+  <router-outlet></router-outlet>
+</div>
