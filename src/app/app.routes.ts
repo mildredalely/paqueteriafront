@@ -5,6 +5,7 @@ import { CajaComponent } from './pages/caja/caja.component';
 import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
 import { EnvioMxComponent } from './pages/envio-mx/envio-mx.component';
 import { HistorialComponent } from './pages/historial/historial.component';
+import { DetalleHistorialComponent } from './pages/detalle-historial/detalle-historial.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,10 @@ export const routes: Routes = [
     {
         path: 'historial',
         component: HistorialComponent
+    },
+    {
+        path: 'detalle/:id',
+        component: DetalleHistorialComponent
     },
     {
         path: '**',
